@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Test
+  m_Name: Unlit1
   m_Shader: {fileID: 4800000, guid: 76f6be2ae826c04459c924f37552fcb5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -78,6 +78,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.5566038, g: 0.05593559, b: 0.04463333, a: 1}
+    - _BaseColor: {r: 0.21003917, g: 0.3966461, b: 0.754717, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
