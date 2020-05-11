@@ -11,7 +11,9 @@ public class CameraRenderer
 
     const string bufferName = "Render Camera";
 
-    static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");
+    static ShaderTagId
+		unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit"),
+		litShaderTagId = new ShaderTagId("CustomLit");
 
     static ShaderTagId[] legacyShaderTagIds = {
         new ShaderTagId("Always"),
