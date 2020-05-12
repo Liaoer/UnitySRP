@@ -7,8 +7,8 @@
 //CBUFFER_END
 
 UNITY_INSTANCING_BUFFER_START(UnityPerMaterial)
-    //  float4 _BaseColor;
-    UNITY_DEFINE_INSTANCED_PROP(float4, _BaseColor)
+//  float4 _BaseColor;
+UNITY_DEFINE_INSTANCED_PROP(float4, _BaseColor)
 UNITY_INSTANCING_BUFFER_END(UnityPerMaterial)
 
 struct Attributes {

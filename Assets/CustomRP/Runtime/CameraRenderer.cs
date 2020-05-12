@@ -30,6 +30,8 @@ public class CameraRenderer
         name = bufferName
     };
 
+    Lighting lighting = new Lighting();
+
     public void Render (ScriptableRenderContext context, Camera camera,bool useDynamicBatching, bool useGPUInstancing)
     {
         this.context = context;
@@ -41,6 +43,7 @@ public class CameraRenderer
         }
 
         Setup();
+        lighting.Setup(context, cullingResults);
         DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
         Submit();
@@ -75,6 +78,7 @@ public class CameraRenderer
             enableDynamicBatching = useDynamicBatching,
 			enableInstancing = useGPUInstancing
         };
+        drawingSettings.SetShaderPassName(1, litShaderTagId);
 
         //不透明物体
 		var filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
