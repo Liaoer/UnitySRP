@@ -25,43 +25,44 @@ public class Lighting
 
     CommandBuffer buffer = new CommandBuffer 
     {
-       name = bufferName
+        name = bufferName
     };
 
     public void Setup(ScriptableRenderContext context, CullingResults cullingResults)
     {
-       this.cullingResults = cullingResults;
-       buffer.BeginSample(bufferName);
-       SetupLights();
-       //SetupDirectionalLight();
-       buffer.EndSample(bufferName);
-       context.ExecuteCommandBuffer(buffer);
-       buffer.Clear();
+        this.cullingResults = cullingResults;
+        buffer.BeginSample(bufferName);
+        SetupLights();
+        //SetupDirectionalLight();
+        buffer.EndSample(bufferName);
+        context.ExecuteCommandBuffer(buffer);
+        buffer.Clear();
     }
 
     void SetupLights () 
     {
-		NativeArray<VisibleLight> visibleLights = cullingResults.visibleLights;
+        NativeArray<VisibleLight> visibleLights = cullingResults.visibleLights;
         int dirLightCount = 0;
-        for (int i = 0; i < visibleLights.Length; i++) {
-			VisibleLight visibleLight = visibleLights[i];
-            if (visibleLight.lightType == LightType.Directional) 
+        for (int i = 0; i < visibleLights.Length; i++) 
+        {
+          VisibleLight visibleLight = visibleLights[i];
+          if (visibleLight.lightType == LightType.Directional) 
+          {
+            SetupDirectionalLight(dirLightCount++, ref visibleLight);
+            if (dirLightCount >= maxDirLightCount) 
             {
-                SetupDirectionalLight(dirLightCount++, ref visibleLight);
-                if (dirLightCount >= maxDirLightCount) {
-                    break;
-                }
+                break;
             }
-		}
-
-		buffer.SetGlobalInt(dirLightCountId, visibleLights.Length);
-		buffer.SetGlobalVectorArray(dirLightColorsId, dirLightColors);
-		buffer.SetGlobalVectorArray(dirLightDirectionsId, dirLightDirections);
+          }
+        }
+        buffer.SetGlobalInt(dirLightCountId, visibleLights.Length);
+        buffer.SetGlobalVectorArray(dirLightColorsId, dirLightColors);
+        buffer.SetGlobalVectorArray(dirLightDirectionsId, dirLightDirections);
     }
 
     void SetupDirectionalLight (int index, ref VisibleLight visibleLight) 
     {
         dirLightColors[index] = visibleLight.finalColor;
-		dirLightDirections[index] = -visibleLight.localToWorldMatrix.GetColumn(2);
+        dirLightDirections[index] = -visibleLight.localToWorldMatrix.GetColumn(2);
     }
 }
