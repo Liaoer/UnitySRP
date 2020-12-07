@@ -28,12 +28,16 @@ public class Lighting
         name = bufferName
     };
 
-    public void Setup(ScriptableRenderContext context, CullingResults cullingResults)
+    Shadows shadows = new Shadows();
+
+    public void Setup(ScriptableRenderContext context, CullingResults cullingResults, ShadowSettings shadowSettings)
     {
         this.cullingResults = cullingResults;
         buffer.BeginSample(bufferName);
+        shadows.Setup(context, cullingResults, shadowSettings);
         SetupLights();
         //SetupDirectionalLight();
+        shadows.Render();
         buffer.EndSample(bufferName);
         context.ExecuteCommandBuffer(buffer);
         buffer.Clear();
@@ -65,5 +69,11 @@ public class Lighting
         dirLightColors[index] = visibleLight.finalColor;
         //得到光照的forward方向 /GetColumn(0) right 方向 /GetColumn(1) up方向
         dirLightDirections[index] = -visibleLight.localToWorldMatrix.GetColumn(2);
+        shadows.ReserveDirtionalShadows(visibleLight.light, index);
+    }
+
+    public void Cleanup()
+    {
+      shadows.Cleanup();
     }
 }
