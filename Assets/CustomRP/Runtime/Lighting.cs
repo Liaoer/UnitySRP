@@ -63,6 +63,7 @@ public class Lighting
     void SetupDirectionalLight (int index, ref VisibleLight visibleLight) 
     {
         dirLightColors[index] = visibleLight.finalColor;
+        //得到光照的forward方向 /GetColumn(0) right 方向 /GetColumn(1) up方向
         dirLightDirections[index] = -visibleLight.localToWorldMatrix.GetColumn(2);
     }
 }

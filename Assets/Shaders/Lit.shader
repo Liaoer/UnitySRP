@@ -31,6 +31,7 @@
 			HLSLPROGRAM
 			#pragma target 3.5
 			#pragma multi_compile_instancing
+			#pragma shader_feature _CLIPPING
 			#pragma shader_feature _PREMULTIPLY_ALPHA
 			#pragma vertex LitPassVertex
 			#pragma fragment LitPassFragment

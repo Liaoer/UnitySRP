@@ -121,7 +121,7 @@ public class CameraRenderer
     void DrawUnsupportedShaders()
     {
         var drawingSettings = new DrawingSettings(
-        legacyShaderTagIds[0], new SortingSettings(camera)
+            legacyShaderTagIds[0], new SortingSettings(camera)
         );
         for (int i = 1; i < legacyShaderTagIds.Length; i++)
         {
