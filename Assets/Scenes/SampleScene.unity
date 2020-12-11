@@ -153,10 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 1
-  smoothness: 0
 --- !u!135 &7309334
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -337,10 +333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.239
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &13496615
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,10 +475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.6650944, g: 1, b: 0.77302, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!65 &21747316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -593,10 +581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.5
-  smoothness: 0.95
 --- !u!135 &22851630
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -703,10 +687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.25
-  smoothness: 0
 --- !u!135 &32431153
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -887,10 +867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.08
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &46883933
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,10 +899,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.6650944, g: 1, b: 0.77302, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!65 &46883935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1033,10 +1005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 1
-  smoothness: 0.75
 --- !u!135 &52713794
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1327,10 +1295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.3151633, g: 0.3066038, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &57424891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,10 +1401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 0.9887206, b: 0.9103774, a: 1}
-  alphaCutoff: 0.718
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &97062660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2674,10 +2634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 1
-  smoothness: 0.95
 --- !u!135 &196331419
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3374,10 +3330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 0.7783019, b: 0.7804504, a: 1}
-  alphaCutoff: 0.483
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &316887927
 GameObject:
   m_ObjectHideFlags: 0
@@ -3410,10 +3362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.95
 --- !u!135 &316887929
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3520,10 +3468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.6650944, g: 1, b: 0.77302, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!65 &318910705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3704,10 +3648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.99085605, g: 0.495283, b: 1, a: 1}
-  alphaCutoff: 0.282
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &331147505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,7 +3664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &331147506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3933,10 +3873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.6650944, g: 1, b: 0.77302, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!65 &363067814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4539,10 +4475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.4669811, g: 0.688926, b: 1, a: 1}
-  alphaCutoff: 0.769
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &447070327
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,10 +5581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.5
-  smoothness: 0.75
 --- !u!135 &600282207
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6107,7 +6035,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f679c73ce40f49b4922406c03e95520, type: 2}
+  - {fileID: 2100000, guid: 103e314346895894a958e50c5cb5dc22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6256,10 +6184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.5471698, g: 0.15122512, b: 0.11098256, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &669832167
 GameObject:
   m_ObjectHideFlags: 0
@@ -6882,10 +6806,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.5
-  smoothness: 0
 --- !u!135 &729048515
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7269,10 +7189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.4056604, g: 0.26597545, b: 0.26597545, a: 1}
-  alphaCutoff: 0.349
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &791172803
 GameObject:
   m_ObjectHideFlags: 0
@@ -7305,10 +7221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.75
-  smoothness: 0.75
 --- !u!135 &791172805
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7415,10 +7327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.25
-  smoothness: 0.75
 --- !u!135 &796945589
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7599,10 +7507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.6698113, g: 0.4955783, b: 0, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &807455508
 GameObject:
   m_ObjectHideFlags: 0
@@ -8041,10 +7945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.25
-  smoothness: 0.5
 --- !u!135 &846713117
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8371,10 +8271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.25
-  smoothness: 0.25
 --- !u!135 &873062830
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8481,10 +8377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.6650944, g: 1, b: 0.77302, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!65 &876460029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9215,10 +9107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.33962262, g: 0.05286579, b: 0.05286579, a: 1}
-  alphaCutoff: 0.248
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &935714344
 GameObject:
   m_ObjectHideFlags: 0
@@ -10000,10 +9888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.42828262, g: 0.15979885, b: 0.5377358, a: 1}
-  alphaCutoff: 0.702
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1032828891
 GameObject:
   m_ObjectHideFlags: 0
@@ -10036,10 +9920,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!135 &1032828893
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10313,10 +10193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.5471652, g: 1, b: 0.3254717, a: 1}
-  alphaCutoff: 0.634
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1059431673
 GameObject:
   m_ObjectHideFlags: 0
@@ -10903,10 +10779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 0.5990566, b: 0.5990566, a: 1}
-  alphaCutoff: 0.315
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1146553494
 GameObject:
   m_ObjectHideFlags: 0
@@ -11013,10 +10885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.63678074, g: 0.30215383, b: 0.6603774, a: 1}
-  alphaCutoff: 0.349
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1147205914
 GameObject:
   m_ObjectHideFlags: 0
@@ -11510,10 +11378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.6650944, g: 1, b: 0.77302, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!65 &1231081159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11804,10 +11668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 0.71488464, b: 0, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1258860834
 GameObject:
   m_ObjectHideFlags: 0
@@ -11933,10 +11793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.75
-  smoothness: 0.25
 --- !u!135 &1285237276
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12326,10 +12182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0, g: 0.89049053, b: 1, a: 1}
-  alphaCutoff: 0.693
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1342113029
 GameObject:
   m_ObjectHideFlags: 0
@@ -12362,10 +12214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.75
-  smoothness: 0
 --- !u!135 &1342113031
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12578,10 +12426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.75
-  smoothness: 0.95
 --- !u!135 &1350214059
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12762,10 +12606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.55108577, g: 0.61866397, b: 0.9056604, a: 1}
-  alphaCutoff: 0.239
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1403377212
 GameObject:
   m_ObjectHideFlags: 0
@@ -12908,10 +12748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.25
-  smoothness: 0.95
 --- !u!135 &1403531047
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13202,10 +13038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.17288181, g: 0.3301887, b: 0.23265056, a: 1}
-  alphaCutoff: 0.735
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1428339882
 GameObject:
   m_ObjectHideFlags: 0
@@ -13422,10 +13254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.9150943, g: 0.89056176, b: 0.48776254, a: 1}
-  alphaCutoff: 0.235
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1431896651
 GameObject:
   m_ObjectHideFlags: 0
@@ -13551,10 +13379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 1
-  smoothness: 0.25
 --- !u!135 &1434458785
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14050,10 +13874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 1
-  smoothness: 0.5
 --- !u!135 &1480914597
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15004,10 +14824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.75
-  smoothness: 0.5
 --- !u!135 &1629874935
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15854,10 +15670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0
 --- !u!135 &1706533293
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16461,10 +16273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.2325116, g: 0.595324, b: 0.8962264, a: 1}
-  alphaCutoff: 0.366
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1816690869
 GameObject:
   m_ObjectHideFlags: 0
@@ -16497,10 +16305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.25
 --- !u!135 &1816690871
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17043,10 +16847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.6650944, g: 1, b: 0.77302, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!65 &1912387105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17153,10 +16953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.6650944, g: 1, b: 0.77302, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!65 &1915438014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17337,10 +17133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.18383993, g: 0.46226418, b: 0.09376113, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1927595834
 GameObject:
   m_ObjectHideFlags: 0
@@ -17742,10 +17534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.507209, g: 0.7411159, b: 0.7735849, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &1940481654
 GameObject:
   m_ObjectHideFlags: 0
@@ -17778,10 +17566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0
-  smoothness: 0.75
 --- !u!135 &1940481656
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18986,10 +18770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.744
-  metallic: 0
-  smoothness: 0.5
 --- !u!1 &2075450785
 GameObject:
   m_ObjectHideFlags: 0
@@ -19100,10 +18880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.5
-  smoothness: 0.5
 --- !u!135 &2088276785
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19276,10 +19052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b34fac330b345eea0c6df7126deddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  alphaCutoff: 0.5
-  metallic: 0.5
-  smoothness: 0.25
 --- !u!135 &2117025721
 SphereCollider:
   m_ObjectHideFlags: 0

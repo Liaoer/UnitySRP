@@ -15,7 +15,7 @@ public class Shadows
 
     ShadowSettings settings;
 
-    const int maxShadowedDirectionalLightCount = 1;
+    const int maxShadowedDirectionalLightCount = 4;
 
     int ShadowedDirectionalLightCount;
 
