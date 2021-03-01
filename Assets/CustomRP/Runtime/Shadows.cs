@@ -19,7 +19,10 @@ public class Shadows
 
     int ShadowedDirectionalLightCount;
 
-    static int dirShadowAtlasId = Shader.PropertyToID("_DirectionalShadowAtlas");
+    static int dirShadowAtlasId = Shader.PropertyToID("_DirectionalShadowAtlas"),
+    dirShadowMatricesId= Shader.PropertyToID("_DirectionalShadowMatrices");
+
+    static Matrix4x4[] dirShadowMatrices = new Matrix4x4[maxShadowedDirectionalLightCount];
 
     struct ShadowedDirectionalLight
     {
@@ -66,6 +69,8 @@ public class Shadows
     void RenderDirectionalShadows()
     {
         int atlasSize = (int)settings.directional.atlasSize;
+        int split = ShadowedDirectionalLightCount <= 1 ? 1 : 2;
+        int titleSize =  atlasSize / split;
         buffer.GetTemporaryRT(dirShadowAtlasId, atlasSize, atlasSize, 32, FilterMode.Bilinear, RenderTextureFormat.Shadowmap);
         buffer.SetRenderTarget(dirShadowAtlasId, RenderBufferLoadAction.DontCare, RenderBufferStoreAction.Store);
         buffer.ClearRenderTarget(true, false, Color.clear);
@@ -74,14 +79,14 @@ public class Shadows
 
         for(int i=0; i < ShadowedDirectionalLightCount; i++)
         {
-            RenderDirectionalShadows(i, atlasSize);
+            RenderDirectionalShadows(i, split, atlasSize);
         }
 
         buffer.EndSample(bufferName);
         ExecuteBuffer();
     }
 
-    void RenderDirectionalShadows (int index, int tileSize) 
+    void RenderDirectionalShadows (int index, int split, int tileSize) 
     {
         ShadowedDirectionalLight light = ShadowedDirectionalLights[index];
         var shadowSettings = new ShadowDrawingSettings(cullingResults, light.visibleLightIndex);
@@ -92,9 +97,16 @@ public class Shadows
             out ShadowSplitData splitData
         );
         shadowSettings.splitData = splitData;
+        SetTitleViewport(index, split, tileSize);
         buffer.SetViewProjectionMatrices(viewMatrix, projectionMatrix);
         ExecuteBuffer();
         context.DrawShadows(ref shadowSettings);
+    }
+
+    void SetTitleViewport(int index, int split, float titleSize)
+    {
+        Vector2 offset = new Vector2(index % split, index /  split);
+        buffer.SetViewport(new Rect(offset.x * titleSize, offset.y  * titleSize,  titleSize, titleSize));
     }
 
     public void Cleanup()
