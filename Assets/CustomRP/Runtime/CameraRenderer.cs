@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 //为方便每一个相机单独订制渲染方案，我们可以为每一个相机自定义一个相机渲染器类
-public class CameraRenderer
+public partial class CameraRenderer
 {
     ScriptableRenderContext context;
 
@@ -14,15 +14,6 @@ public class CameraRenderer
     static ShaderTagId
 		unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit"),
 		litShaderTagId = new ShaderTagId("CustomLit");
-
-    static ShaderTagId[] legacyShaderTagIds = {
-        new ShaderTagId("Always"),
-        new ShaderTagId("ForwardBase"),
-        new ShaderTagId("PrepassBase"),
-        new ShaderTagId("Vertex"),
-        new ShaderTagId("VertexLMRGBM"),
-        new ShaderTagId("VertexLM")
-    };
 
     CullingResults cullingResults;
 
@@ -37,15 +28,17 @@ public class CameraRenderer
     {
         this.context = context;
         this.camera = camera;
-
+        
+        PrepareBuffer();
+        PrepareForSceneWindow();
         if(!Cull(shadowSettings.maxDistance))
         {
             return;
         }
 
-        //buffer.BeginSample(SampleName);
+        buffer.BeginSample(SampleName);
         lighting.Setup(context, cullingResults, shadowSettings);
-        //buffer.BeginSample(SampleName);
+        buffer.BeginSample(SampleName);
         Setup();
         DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
@@ -121,20 +114,5 @@ public class CameraRenderer
 			return true;
 		}
 		return false;
-    }
-
-    void DrawUnsupportedShaders()
-    {
-        var drawingSettings = new DrawingSettings(
-            legacyShaderTagIds[0], new SortingSettings(camera)
-        );
-        for (int i = 1; i < legacyShaderTagIds.Length; i++)
-        {
-            drawingSettings.SetShaderPassName(i, legacyShaderTagIds[i]);
-        }
-        var filteringSettings = FilteringSettings.defaultValue;
-        context.DrawRenderers(
-            cullingResults, ref drawingSettings, ref filteringSettings
-        );
     }
 }
