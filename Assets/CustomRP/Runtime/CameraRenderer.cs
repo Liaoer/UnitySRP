@@ -36,9 +36,9 @@ public partial class CameraRenderer
             return;
         }
 
-        buffer.BeginSample(SampleName);
+        //buffer.BeginSample(SampleName);
         lighting.Setup(context, cullingResults, shadowSettings);
-        buffer.BeginSample(SampleName);
+        //buffer.BeginSample(SampleName);
         Setup();
         DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
