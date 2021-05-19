@@ -43,15 +43,17 @@ public class Shadows
         buffer.Clear();
     }
 
-    public void ReserveDirtionalShadows(Light light, int visibleLightIndex)
+    public Vector2 ReserveDirtionalShadows(Light light, int visibleLightIndex)
     {
         if(ShadowedDirectionalLightCount < maxShadowedDirectionalLightCount && light.shadows != LightShadows.None && light.shadowStrength > 0f &&
         cullingResults.GetShadowCasterBounds(visibleLightIndex, out Bounds b))
         {
-            ShadowedDirectionalLights[ShadowedDirectionalLightCount++] = new ShadowedDirectionalLight{
+            ShadowedDirectionalLights[ShadowedDirectionalLightCount] = new ShadowedDirectionalLight{
                 visibleLightIndex = visibleLightIndex
             };
+            return new Vector2(light.shadowStrength, ShadowedDirectionalLightCount++);
         }
+        return Vector2.zero;
     }
 
     public void Render()
