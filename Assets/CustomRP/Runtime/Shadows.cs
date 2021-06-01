@@ -73,7 +73,7 @@ public class Shadows
     {
         int atlasSize = (int)settings.directional.atlasSize;
         int split = ShadowedDirectionalLightCount <= 1 ? 1 : 2;
-        int titleSize =  atlasSize / split;
+        int tileSize =  atlasSize / split;
         buffer.GetTemporaryRT(dirShadowAtlasId, atlasSize, atlasSize, 32, FilterMode.Bilinear, RenderTextureFormat.Shadowmap);
         buffer.SetRenderTarget(dirShadowAtlasId, RenderBufferLoadAction.DontCare, RenderBufferStoreAction.Store);
         buffer.ClearRenderTarget(true, false, Color.clear);
@@ -83,7 +83,7 @@ public class Shadows
 
         for(int i=0; i < ShadowedDirectionalLightCount; i++)
         {
-            RenderDirectionalShadows(i, split, atlasSize);
+            RenderDirectionalShadows(i, split, tileSize);
         }
 
         buffer.EndSample(bufferName);
