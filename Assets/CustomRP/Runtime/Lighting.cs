@@ -73,11 +73,11 @@ public class Lighting
         dirLightColors[index] = visibleLight.finalColor;
         //得到光照的forward方向 /GetColumn(0) right 方向 /GetColumn(1) up方向
         dirLightDirections[index] = -visibleLight.localToWorldMatrix.GetColumn(2);
-        dirLightShadowData[index] = shadows.ReserveDirtionalShadows(visibleLight.light, index);
+        dirLightShadowData[index] = shadows.ReserveDirectionalShadows(visibleLight.light, index);
     }
 
     public void Cleanup()
     {
-      shadows.Cleanup();
+        shadows.Cleanup();
     }
 }
