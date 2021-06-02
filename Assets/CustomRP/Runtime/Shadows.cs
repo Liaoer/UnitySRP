@@ -23,16 +23,19 @@ public class Shadows
     dirShadowMatricesId= Shader.PropertyToID("_DirectionalShadowMatrices"),
     cascadeCountId = Shader.PropertyToID("_CascadeCount"),
     cascadeCullingSpheresId = Shader.PropertyToID("_CascadeCullingSpheres"),
+    cascadeDataId = Shader.PropertyToID("_CascadeData"),
     shadowDistanceFadeId = Shader.PropertyToID("_ShadowDistanceFade");
 
 
     static Matrix4x4[] dirShadowMatrices = new Matrix4x4[maxShadowedDirectionalLightCount * maxCascades];
 
-    static Vector4[] cascadeCullingShperes = new Vector4[maxCascades];
+    static Vector4[] cascadeCullingShperes = new Vector4[maxCascades],
+    cascadeData = new Vector4[maxCascades];
 
     struct ShadowedDirectionalLight
     {
         public int visibleLightIndex;
+        public float slopeScaleBias;
     }
     ShadowedDirectionalLight[] ShadowedDirectionalLights = new ShadowedDirectionalLight[maxShadowedDirectionalLightCount];
 
@@ -50,17 +53,18 @@ public class Shadows
         buffer.Clear();
     }
 
-    public Vector2 ReserveDirectionalShadows(Light light, int visibleLightIndex)
+    public Vector3 ReserveDirectionalShadows(Light light, int visibleLightIndex)
     {
         if(ShadowedDirectionalLightCount < maxShadowedDirectionalLightCount && light.shadows != LightShadows.None && light.shadowStrength > 0f &&
         cullingResults.GetShadowCasterBounds(visibleLightIndex, out Bounds b))
         {
             ShadowedDirectionalLights[ShadowedDirectionalLightCount] = new ShadowedDirectionalLight{
-                visibleLightIndex = visibleLightIndex
+                visibleLightIndex = visibleLightIndex,
+                slopeScaleBias = light.shadowBias
             };
-            return new Vector2(light.shadowStrength, settings.directional.cascadeCount * ShadowedDirectionalLightCount++);
+            return new Vector3(light.shadowStrength, settings.directional.cascadeCount * ShadowedDirectionalLightCount++, light.shadowBias);
         }
-        return Vector2.zero;
+        return Vector3.zero;
     }
 
     public void Render()
@@ -86,6 +90,7 @@ public class Shadows
         buffer.ClearRenderTarget(true, false, Color.clear);
         buffer.SetGlobalInt(cascadeCountId, settings.directional.cascadeCount);
         buffer.SetGlobalVectorArray(cascadeCullingSpheresId, cascadeCullingShperes);
+        buffer.SetGlobalVectorArray(cascadeDataId, cascadeData);
         buffer.SetGlobalMatrixArray(dirShadowMatricesId, dirShadowMatrices);
         float f = 1f - settings.directional.cascadeFade;
         buffer.SetGlobalVector(shadowDistanceFadeId, new Vector4(1f / settings.maxDistance, 1f / settings.distanceFade, 1f / (1f - f*f)));
@@ -119,19 +124,27 @@ public class Shadows
             shadowSettings.splitData = splitData;
             if(index == 0)
             {
-                Vector4 cullingShpere = splitData.cullingSphere;
-                cullingShpere.w *= cullingShpere.w;
-                cascadeCullingShperes[i] = cullingShpere;
+                SetCascadeData(i, splitData.cullingSphere, tileSize);
             }
             int tileIndex = tileOffset + i;
             // SetTitleViewport(index, split, tileSize);
             dirShadowMatrices[tileIndex] = ConvertToAtlasMatrix(projectionMatrix * viewMatrix, SetTitleViewport(tileIndex, split, tileSize), split);
             buffer.SetViewProjectionMatrices(viewMatrix, projectionMatrix);
             // buffer.SetGlobalDepthBias(0f,3f);
+            buffer.SetGlobalDepthBias(0f, light.slopeScaleBias);
             ExecuteBuffer();
             context.DrawShadows(ref shadowSettings);
-            // buffer.SetGlobalDepthBias(0f,0f);
+            buffer.SetGlobalDepthBias(0f,0f);
         }
+    }
+
+    void SetCascadeData(int index, Vector4 cullingSphere, float tileSize)
+    {
+        float texelSize = 2f * cullingSphere.w / tileSize;
+        // cascadeData[index].x = 1f / cullingSphere.w;
+        cullingSphere.w *= cullingSphere.w;
+        cascadeCullingShperes[index] = cullingSphere;
+        cascadeData[index] = new Vector4(1f / cullingSphere.w, texelSize * 1.4142136f);
     }
 
     Vector2 SetTitleViewport(int index, int split, float titleSize)
