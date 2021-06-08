@@ -34,6 +34,7 @@
 			#pragma multi_compile_instancing
 			#pragma shader_feature _CLIPPING
 			#pragma shader_feature _PREMULTIPLY_ALPHA
+			#pragma multi_compile _ _DIRECTIONAL_PCF3 _DIRECTIONAL_PCF5 _DIRECTIONAL_PCF7
 			#pragma vertex LitPassVertex
 			#pragma fragment LitPassFragment
 			#include "LitPass.hlsl"
